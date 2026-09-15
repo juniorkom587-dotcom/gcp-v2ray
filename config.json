@@ -6,8 +6,7 @@
       "settings": {
         "clients": [
           {
-            "id": "36459fd0-0c89-4733-b20e-067ffc341bd5",
-            "level": 0
+            "id": "36459fd0-0c89-4733-b20e-067ffc341bd5"
           }
         ],
         "decryption": "none"
@@ -15,7 +14,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/TG-@Not_Ragnar"
+          "path": "/simonfree"
         }
       }
     }
@@ -23,7 +22,9 @@
   "outbounds": [
     {
       "protocol": "freedom",
-      "settings": {}
+      "settings": {
+        "redirect": "188.213.143.103"
+      }
     }
   ]
 }
