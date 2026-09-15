@@ -1,54 +1,14 @@
-{
-  "inbounds": [
-    {
-      "port": 8080,
-      "protocol": "vless",
-      "settings": {
-        "clients": [
-          {
-            "id": "36459fd0-0c89-4733-b20e-067ffc341bd5"
-          }
-        ],
-        "decryption": "none"
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/TG-@Not_Ragnar"
-        }
-      }
+server {
+    listen 8080;
+
+    location /TG-@Not_Ragnar {
+        proxy_redirect off;
+        proxy_pass https://simon.simonfreevps.icu:443/simonfree;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host simon.simonfreevps.icu;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
-  ],
-  "outbounds": [
-    {
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "simon.simonfreevps.icu",
-            "port": 443,
-            "users": [
-              {
-                "id": "36459fd0-0c89-4733-b20e-067ffc341bd5",
-                "encryption": "none"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "simon.simonfreevps.icu"
-        },
-        "wsSettings": {
-          "path": "/simonfree",
-          "headers": {
-            "Host": "simon.simonfreevps.icu"
-          }
-        }
-      }
-    }
-  ]
 }
