@@ -6,7 +6,8 @@
       "settings": {
         "clients": [
           {
-            "id": "36459fd0-0c89-4733-b20e-067ffc341bd5"
+            "id": "36459fd0-0c89-4733-b20e-067ffc341bd5",
+            "level": 0
           }
         ],
         "decryption": "none"
@@ -14,16 +15,15 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/simonfree"
+          "path": "/t.me/ragnarservers"
         }
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom",
-      "settings": {
-        "redirect": "188.213.143.103"
-      }
+      "protocol": "freedom"
+         "redirect": "188.213.143.103"
+    }
   ]
 }
