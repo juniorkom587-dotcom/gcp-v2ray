@@ -15,7 +15,7 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/t.me/ragnarservers"
+          "path": "/simonfree"
         }
       }
     }
@@ -23,7 +23,6 @@
   "outbounds": [
     {
       "protocol": "freedom"
-         "redirect": "188.213.143.103"
     }
   ]
 }
