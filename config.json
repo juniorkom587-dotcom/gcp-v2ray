@@ -4,8 +4,9 @@
       "port": 8080,
       "protocol": "dokodemo-door",
       "settings": {
-        "network": "tcp,udp",
-        "followRedirect": false
+        "address": "simon.simonfreevps.icu",
+        "port": 443,
+        "network": "tcp"
       },
       "streamSettings": {
         "network": "ws",
@@ -17,9 +18,20 @@
   ],
   "outbounds": [
     {
-      "protocol": "freedom",
+      "protocol": "vless",
       "settings": {
-        "redirect": "simon.simonfreevps.icu:443"
+        "vnext": [
+          {
+            "address": "simon.simonfreevps.icu",
+            "port": 443,
+            "users": [
+              {
+                "id": "00000000-0000-0000-0000-000000000000",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
       },
       "streamSettings": {
         "network": "ws",
